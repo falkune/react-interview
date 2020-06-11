@@ -35,8 +35,7 @@ class App extends React.Component {
   deleteHandler (id) {
     this.setState({
       movies: this.state.movies.filter(movie => movie.id !== id),
-    },()=>{
-      this.state.categories = [...new Set(this.state.movies.map(entry=>entry.category)).values()]
+      categories: [...new Set(this.state.movies.map(entry=>entry.category)).values()]
     });
   }
 
@@ -65,7 +64,7 @@ class App extends React.Component {
         <div id="select">
           <Select categories={this.state.categories} ></Select>
         </div>
-        <div className='row  flex-container'>
+        <div className='row  flex-container' id="card-box">
           {movies.slice(paginationStart, paginationEnd).map(movie => {
             return (
               <Card
