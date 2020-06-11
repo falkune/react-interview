@@ -1,38 +1,91 @@
-.App {
+#root{
+  width: 70%;
+  margin: auto;
+}
+.container {
+  width: 1024px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.card {
+  height: 270px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card:hover .btn--togglelike {
+  transform: translateY(0px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card:hover:before {
+  opacity: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card__title {
+  color: #555555;
+  font-size: 20px;
+}
+
+.card__footer {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 10px;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.card__subtitle{
+  color: #999999;
+  font-size: 16px
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+  cursor: pointer;
+  outline: none;
+}
+
+.btn--togglelike {
+  position: absolute;
+  border: none;
+  top: calc(50% - 30px);
+  left: calc(50% - 35px);
+  background-color: transparent;
+  font-size: 4em;
+  transform: translateY(200px);
+  transition: transform 0.5s, color 0.2s;
+}
+
+.btn--delete{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  transition: transform 0.2s;
+}
+
+.btn--delete:hover{
+  transform: scale(1.5);
+}
+
+.select{
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  margin-bottom: 15px;
+  border: none;
+}
+
+.fa-thumbs-up:hover{
+  cursor: pointer;
+}
+
+.fa-thumbs-down:hover{
+  cursor: pointer;
+}
+
+#item{
+  margin-bottom: 10px;
 }
