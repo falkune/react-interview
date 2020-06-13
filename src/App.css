@@ -102,5 +102,5 @@
 
 .col-sm-10{
   flex: none !important;
-  max-width: 100%;
+  max-width: 50%;
 }

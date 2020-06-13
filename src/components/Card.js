@@ -14,7 +14,7 @@ class Card extends React.Component {
   }
 
   like(){
-    if(this.state.liked == false && this.state.disliked == false){
+    if(this.state.liked === false && this.state.disliked === false){
       this.setState(prev=>{
         return {
           likes: prev.likes + 1,
@@ -22,7 +22,7 @@ class Card extends React.Component {
         }
       })
     }
-    if(this.state.liked == false && this.state.disliked == true){
+    if(this.state.liked === false && this.state.disliked === true){
       this.setState(prev=>{
         return {
           likes: prev.likes + 1,
@@ -34,7 +34,7 @@ class Card extends React.Component {
     }
   }
   dislike() {
-    if(this.state.disliked == false && this.state.liked == false){
+    if(this.state.disliked === false && this.state.liked === false){
       this.setState(prev=>{
         return {
           dislikes: prev.dislikes + 1,
@@ -42,7 +42,7 @@ class Card extends React.Component {
         }
       })
     }
-    if(this.state.disliked == false && this.state.liked == true){
+    if(this.state.disliked === false && this.state.liked === true){
       this.setState(prev=>{
         return {
           likes: prev.likes - 1,
@@ -66,7 +66,7 @@ class Card extends React.Component {
 
           <div className='card__footer'>
             <div>
-              <span className="like" onClick={this.like.bind(this)}><i className="far fa-thumbs-up"></i></span> {this.state.likes} Likes 
+              <span className="like" onClick={this.like.bind(this)}><i className="far fa-thumbs-up"></i></span> {this.state.likes} Likes
             </div>
             <div>
               <span className="dislike" onClick={this.dislike.bind(this)}><i className="far fa-thumbs-down"></i></span> {this.state.dislikes} Dislikes
